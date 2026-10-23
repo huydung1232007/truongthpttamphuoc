@@ -425,10 +425,10 @@ header.h>.wrap{position:relative}
 
       {id:3,title:'Hoạt động Đoàn trường tháng 10 (bài mẫu)',cat:'Đoàn – Hội',author:'Đoàn trường (mẫu)',date:'2026-10-06',status:'published',summary:'Mẫu tin về phong trào Đoàn và các chương trình thiện nguyện.',
  img:'assets/news/hd1.jpg',
- body:"h:Đoàn trường tham dự họp mặt kỷ niệm các ngày truyền thống\nimg:assets/news/hd1.jpg | assets/news/hd2.jpg | assets/news/hd3.jpg | assets/news/hd4.jpg | assets/news/hd5.jpg\nh:Đoàn trường tham gia hội nghị đối thoại với thanh niên năm 2026\nimg:assets/news/hd6.jpg | assets/news/hd7.jpg | assets/news/hd8.jpg | assets/news/hd9.jpg\nh:Thông tin và định hướng nghề nghiệp\nimg:assets/news/hd10.jpg | assets/news/hd11.jpg | assets/news/hd12.jpg | assets/news/hd13.jpg\nh:Video\nvid:https://www.youtube.com/watch?v=x5lFkU-Nrbg"},
+ body:"h:Đoàn trường tham dự họp mặt kỷ niệm các ngày truyền thống\nimg:assets/news/hd1.jpg | assets/news/hd2.jpg | assets/news/hd3.jpg | assets/news/hd4.jpg | assets/news/hd5.jpg\nh:Đoàn trường tham gia hội nghị đối thoại với thanh niên năm 2026\nimg:assets/news/hd6.jpg | assets/news/hd7.jpg | assets/news/hd8.jpg | assets/news/hd9.jpg\nh:Thông tin và định hướng nghề nghiệp\nimg:assets/news/hd10.jpg | assets/news/hd11.jpg | assets/news/hd12.jpg | assets/news/hd13.jpg"},
       {id:4,title:'Giải thể thao học sinh',cat:'Thể thao',author:'Tổ Thể dục',date:'',status:'published',summary:'đá bóng, nhảy dây tập thể, cờ vua,...',body:'Nội dung mẫu.',img:'assets/news/the-thao.jpg'},
       {id:5,title:'Khoa học kĩ thuật và STEM',cat:'Học tập',author:'Nhà trường ',date:'',status:'published',summary:'các sản phẩm do học sinh trường sáng tạo ra',body:'Nội dung mẫu.',img:'assets/news/stem.jpg'},
-      {id:6,title:'Văn nghệ chào mừng 20/11 (bài mẫu)',cat:'Văn nghệ',author:'Đoàn trường (mẫu)',date:'2026-10-08',status:'published',summary:'Mẫu tin văn nghệ.',body:'Nội dung mẫu.',
+      {id:6,title:'Văn nghệ chào mừng 20/11 (bài mẫu)',cat:'Văn nghệ',author:'Đoàn trường (mẫu)',date:'2026-10-08',status:'published',summary:'Mẫu tin văn nghệ.',body:'h:Video\nvid:https://www.youtube.com/watch?v=x5lFkU-Nrbg',
  img:'assets/news/van-nghe.jpg',
  imgs:[1,2,3,4].map(i=>'assets/news/van-nghe-'+i+'.jpg')},
       {id:7,title:'Bản nháp chưa xuất bản (mẫu)',cat:'Học tập',author:'Quản trị',date:'2026-10-09',status:'draft',summary:'Bài này là bản nháp, không hiện ở trang công khai.',body:'Nháp.'}],
@@ -471,7 +471,7 @@ header.h>.wrap{position:relative}
        image.dataset.newsFallback='true';image.alt='Ảnh minh họa nhà trường';image.src='assets/news/school-overview.png';
       },true);
       // Update news image paths saved by earlier versions in this browser.
-      for(const item of DB.news){const source=seed.news.find(n=>n.id===item.id);if(source){item.img=source.img;if(source.imgs)item.imgs=structuredClone(source.imgs);if(item.id===3)item.body=source.body;}}
+      for(const item of DB.news){const source=seed.news.find(n=>n.id===item.id);if(source){item.img=source.img;if(source.imgs)item.imgs=structuredClone(source.imgs);if(item.id===3||item.id===6)item.body=source.body;}}
       const fd=d=>new Date(d).toLocaleDateString('vi-VN');
       const pal=['#3158A3','#24477F','#B51F24','#4a74c4','#1d3a68'];
      const thumb=(i,t='',img='')=>img
